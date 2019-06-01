@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "308510489248",
+    "firebase_url": "https://miband2app.firebaseio.com",
+    "project_id": "miband2app",
+    "storage_bucket": "miband2app.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:308510489248:android:7f097bac88cd81ac",
+        "android_client_info": {
+          "package_name": "com.example.mi_band2app"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "308510489248-nm3fi7idriekekdhbds8jv23mpj3cm59.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyB4IVBq0tmpC3ABS1QFI9hMA2YT7ERyfPk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "308510489248-nm3fi7idriekekdhbds8jv23mpj3cm59.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
