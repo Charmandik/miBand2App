@@ -69,6 +69,9 @@ public class RegistryFragment extends Fragment {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
                         }
+                        else;
+                        //todo: message if catched error
+
                     }
                 });
     }

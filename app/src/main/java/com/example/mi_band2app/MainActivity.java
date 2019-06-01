@@ -10,6 +10,7 @@ import android.view.WindowManager;
 import com.example.mi_band2app.fragments.LoginFragment;
 import com.example.mi_band2app.fragments.RegistryFragment;
 import com.example.mi_band2app.fragments.StartFragment;
+import com.example.mi_band2app.fragments.StatusFragment;
 import com.example.mi_band2app.fragments.SwitcherFragment;
 
 public class MainActivity extends AppCompatActivity {
@@ -21,6 +22,7 @@ public class MainActivity extends AppCompatActivity {
     public RegistryFragment registryFragment = null;
     public LoginFragment loginFragment = null;
     public SwitcherFragment switcherFragment = null;
+    public StatusFragment statusFragment = null;
 
 
     @Override
@@ -30,7 +32,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setRegistryFragment();
+        setSwitcherFragment();
+        
     }
 
     public void setStartFragment() {
@@ -54,6 +57,12 @@ public class MainActivity extends AppCompatActivity {
     public void setSwitcherFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container, new SwitcherFragment());
+        fragmentTransaction.commit();
+    }
+
+    public void setStatusFragment(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.switcher_container, new StartFragment());
         fragmentTransaction.commit();
     }
 
