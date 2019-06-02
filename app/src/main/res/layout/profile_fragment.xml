@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <LinearLayout
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:orientation="vertical">
+
+    <TextView
+        android:id="@+id/profile_username"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:text="Username" />
+
+    <ImageView
+        android:id="@+id/profile_logo"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:srcCompat="@drawable/logo" />
+
+    <TextView
+        android:id="@+id/profile_goals"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Параметры, которые достиг пользователь" />
+
+    <TextView
+        android:id="@+id/profile_device"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Устройство" />
+
+    <TextView
+        android:id="@+id/profile_set_goal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Установка цели" />
+
+    <TextView
+        android:id="@+id/textView16"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/profile_goal_1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цель№1" />
+
+    <Button
+        android:id="@+id/profile_goal_2"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цель№2" />
+
+    <Button
+        android:id="@+id/profile_goal_3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Цель№3" />
+    </LinearLayout>
+</RelativeLayout>

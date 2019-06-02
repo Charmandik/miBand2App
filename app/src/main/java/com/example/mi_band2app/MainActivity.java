@@ -7,7 +7,9 @@ import android.os.Bundle;
 import android.view.Window;
 import android.view.WindowManager;
 
+import com.example.mi_band2app.fragments.ActionFragment;
 import com.example.mi_band2app.fragments.LoginFragment;
+import com.example.mi_band2app.fragments.ProfileFragment;
 import com.example.mi_band2app.fragments.RegistryFragment;
 import com.example.mi_band2app.fragments.StartFragment;
 import com.example.mi_band2app.fragments.StatusFragment;
@@ -23,6 +25,8 @@ public class MainActivity extends AppCompatActivity {
     public LoginFragment loginFragment = null;
     public SwitcherFragment switcherFragment = null;
     public StatusFragment statusFragment = null;
+    public ActionFragment actionFragment = null;
+    public ProfileFragment profileFragment = null;
 
 
     @Override
@@ -33,7 +37,7 @@ public class MainActivity extends AppCompatActivity {
         fragmentManager = getSupportFragmentManager();
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
         setSwitcherFragment();
-        
+
     }
 
     public void setStartFragment() {
@@ -62,7 +66,19 @@ public class MainActivity extends AppCompatActivity {
 
     public void setStatusFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.switcher_container, new StartFragment());
+        fragmentTransaction.add(R.id.switcher_container, new StatusFragment());
+        fragmentTransaction.commit();
+    }
+
+    public void setActionFragment(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.switcher_container, new ActionFragment());
+        fragmentTransaction.commit();
+    }
+
+    public void setProfileFragment(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.switcher_container, new ProfileFragment());
         fragmentTransaction.commit();
     }
 

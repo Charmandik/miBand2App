@@ -24,7 +24,7 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:orientation="vertical"
-        android:layout_marginBottom="30dp">
+        >
 
         <Button
             android:id="@+id/status_last_activity"
@@ -44,6 +44,7 @@
             android:text="Пульс" />
 
         <LinearLayout
+            android:id="@+id/status_rec_act"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:orientation="horizontal"
