@@ -15,18 +15,21 @@
         android:layout_alignParentBottom="true">
 
         <Button
+            android:id="@+id/switcher_status"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="Статус" />
 
         <Button
+            android:id="@+id/switcher_action"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:text="График Активности" />
 
         <Button
+            android:id="@+id/switcher_profile"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1"

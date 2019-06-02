@@ -45,6 +45,7 @@ public class MainActivity extends AppCompatActivity {
     public void setStartFragment() {
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.container, new StartFragment());
+        fragmentTransaction.addToBackStack("null");
         fragmentTransaction.commit();
     }
 
@@ -64,25 +65,26 @@ public class MainActivity extends AppCompatActivity {
 
     public void setSwitcherFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container, new SwitcherFragment());
+        fragmentTransaction.replace(R.id.container, new SwitcherFragment());
+        fragmentTransaction.addToBackStack("switcher");
         fragmentTransaction.commit();
     }
 
     public void setStatusFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.switcher_container, new StatusFragment());
+        fragmentTransaction.replace(R.id.switcher_container, new StatusFragment());
         fragmentTransaction.commit();
     }
 
     public void setActionGraphicFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.switcher_container, new ActionGraphicFragment());
+        fragmentTransaction.replace(R.id.switcher_container, new ActionGraphicFragment());
         fragmentTransaction.commit();
     }
 
     public void setProfileFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.switcher_container, new ProfileFragment());
+        fragmentTransaction.replace(R.id.switcher_container, new ProfileFragment());
         fragmentTransaction.commit();
     }
 

@@ -68,6 +68,7 @@ public class RegistryFragment extends Fragment {
                     public void onComplete(@NonNull Task<AuthResult> task) {
                         if (task.isSuccessful()) {
                             FirebaseUser user = mAuth.getCurrentUser();
+                            MainActivity.getInstance().setLoginFragment();
                         }
                         else;
                         //todo: message if catched error
