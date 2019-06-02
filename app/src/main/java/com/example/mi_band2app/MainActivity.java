@@ -4,12 +4,12 @@ import android.support.v4.app.FragmentManager;
 import android.support.v4.app.FragmentTransaction;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.view.Window;
-import android.view.WindowManager;
 
 import com.example.mi_band2app.fragments.ActionFragment;
+import com.example.mi_band2app.fragments.ActionGraphicFragment;
 import com.example.mi_band2app.fragments.LoginFragment;
 import com.example.mi_band2app.fragments.ProfileFragment;
+import com.example.mi_band2app.fragments.RecomendationFragment;
 import com.example.mi_band2app.fragments.RegistryFragment;
 import com.example.mi_band2app.fragments.StartFragment;
 import com.example.mi_band2app.fragments.StatusFragment;
@@ -25,8 +25,10 @@ public class MainActivity extends AppCompatActivity {
     public LoginFragment loginFragment = null;
     public SwitcherFragment switcherFragment = null;
     public StatusFragment statusFragment = null;
-    public ActionFragment actionFragment = null;
+    public ActionGraphicFragment actionGraphicFragment = null;
     public ProfileFragment profileFragment = null;
+    public RecomendationFragment recomendationFragment = null;
+    public ActionFragment actionFragment = null;
 
 
     @Override
@@ -36,7 +38,7 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         fragmentManager = getSupportFragmentManager();
 //        getWindow().addFlags(WindowManager.LayoutParams.FLAG_KEEP_SCREEN_ON);
-        setSwitcherFragment();
+        setStartFragment();
 
     }
 
@@ -48,13 +50,15 @@ public class MainActivity extends AppCompatActivity {
 
     public void setRegistryFragment() {
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container, new RegistryFragment());
+        fragmentTransaction.replace(R.id.container, new RegistryFragment());
+        fragmentTransaction.addToBackStack("registry");
         fragmentTransaction.commit();
     }
 
     public void setLoginFragment() {
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.container, new LoginFragment());
+        fragmentTransaction.replace(R.id.container, new LoginFragment());
+        fragmentTransaction.addToBackStack("login");
         fragmentTransaction.commit();
     }
 
@@ -70,15 +74,27 @@ public class MainActivity extends AppCompatActivity {
         fragmentTransaction.commit();
     }
 
-    public void setActionFragment(){
+    public void setActionGraphicFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
-        fragmentTransaction.add(R.id.switcher_container, new ActionFragment());
+        fragmentTransaction.add(R.id.switcher_container, new ActionGraphicFragment());
         fragmentTransaction.commit();
     }
 
     public void setProfileFragment(){
         fragmentTransaction = fragmentManager.beginTransaction();
         fragmentTransaction.add(R.id.switcher_container, new ProfileFragment());
+        fragmentTransaction.commit();
+    }
+
+    public void setRecomendationFragment(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.switcher_container, new RecomendationFragment());
+        fragmentTransaction.commit();
+    }
+
+    public void setActionFragment(){
+        fragmentTransaction = fragmentManager.beginTransaction();
+        fragmentTransaction.add(R.id.switcher_container, new ActionFragment());
         fragmentTransaction.commit();
     }
 
