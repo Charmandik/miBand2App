@@ -33,7 +33,8 @@
             <EditText
                 android:id="@+id/login_email"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_view"
                 android:inputType="textEmailAddress" />
 
             <TextView
@@ -45,7 +46,8 @@
             <EditText
                 android:id="@+id/login_pass"
                 android:layout_width="300dp"
-                android:layout_height="wrap_content"
+                android:layout_height="30dp"
+                android:background="@drawable/rounded_view"
                 android:inputType="textPassword" />
 
             <Button
