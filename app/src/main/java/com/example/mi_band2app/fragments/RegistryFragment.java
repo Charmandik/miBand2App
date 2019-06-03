@@ -71,7 +71,7 @@ public class RegistryFragment extends Fragment {
                             MainActivity.getInstance().setLoginFragment();
                         }
                         else;
-                        //todo: message if catched error
+                        Toast.makeText(MainActivity.getInstance(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
 
                     }
                 });

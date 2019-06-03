@@ -68,7 +68,7 @@ public class LoginFragment extends Fragment {
                             FirebaseUser user = mAuth.getCurrentUser();
                             MainActivity.getInstance().setSwitcherFragment();
                         } else {
-                         //todo: message if catched error
+                         Toast.makeText(MainActivity.getInstance(),task.getException().getMessage(),Toast.LENGTH_LONG).show();
                         }
 
                     }
